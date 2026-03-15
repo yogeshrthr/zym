@@ -1,0 +1,214 @@
+/* FORCE the body to stay dark even with Bootstrap */
+body, html {
+  margin: 0 !important;
+  padding: 0 !important;
+  background-color: #0b1d2a !important; 
+  color: white !important;
+  font-family: Arial, sans-serif;
+}
+
+/* Ensure the Bootstrap container doesn't force a white background */
+.container, .container-fluid {
+  background-color: transparent !important;
+}
+
+
+/* Ensure navbar links change color slightly on hover */
+.nav-link:hover {
+  opacity: 1 !important;
+  color: #1ea7ff !important;
+}
+
+/* Fix for mobile menu background */
+@media (max-width: 991px) {
+  .navbar-collapse {
+    background: #0e2433;
+    padding: 20px;
+    border-radius: 10px;
+    margin-top: 15px;
+  }
+}
+
+/* hero */
+
+.hero{
+  display:flex;
+  padding:80px;
+  align-items:center;
+}
+
+.hero-left{
+  width:50%;
+}
+
+.hero h1{
+  font-size:48px;
+}
+
+.hero-image img{
+  width:500px;
+  border-radius:10px;
+}
+
+/* features */
+
+
+/* pricing */
+.navbar{
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 1000;
+
+  display:flex;
+  justify-content:space-between;
+  align-items:center;
+
+  padding:20px 60px;
+  background:#0e2433;
+}
+body{
+  margin:0;
+  padding-top:80px;
+}
+
+
+
+/* visit */
+
+.visit{
+  display:flex;
+  gap:40px;
+  padding:80px;
+}
+
+.contact form{
+  display:flex;
+  flex-direction:column;
+  gap:10px;
+}
+
+input,textarea{
+  padding:10px;
+  border:none;
+  border-radius:6px;
+}
+
+/* footer */
+
+.footer{
+  text-align:center;
+  padding:40px;
+  background:#08141d;
+}
+
+
+
+
+
+
+
+.schedule-section{
+  padding:80px;
+  background:linear-gradient(90deg,#071c2b,#0b2b3e);
+  color:white;
+  text-align:center;
+}
+
+.schedule-title{
+  font-size:36px;
+  margin-bottom:40px;
+}
+
+.schedule-grid{
+  display:grid;
+  grid-template-columns:repeat(7,1fr);
+  gap:15px;
+  max-width:1100px;
+  margin:auto;
+}
+
+.schedule-day{
+  background:#0f2b3d;
+  border:1px solid #1f4c63;
+  border-radius:10px;
+  padding:15px;
+}
+
+.class-card{
+  background:#14394f;
+  padding:10px;
+  border-radius:6px;
+  margin-top:10px;
+}
+
+.time{
+  font-size:13px;
+  color:#9ed7ff;
+}
+
+.name{
+  font-size:14px;
+  font-weight:bold;
+}
+
+.no-class{
+  opacity:0.6;
+  margin-top:10px;
+}
+
+.schedule-btn{
+  margin-top:30px;
+  padding:12px 28px;
+  background:#1ea7ff;
+  border:none;
+  border-radius:25px;
+  color:white;
+  cursor:pointer;
+}
+
+
+/* footer css */
+.footer{
+  background:#0b1d2a;
+  padding:50px 80px;
+  color:white;
+}
+
+.footer-container{
+  display:flex;
+  justify-content:space-between;
+  align-items:center;
+}
+
+.footer-logo h2{
+  font-size:28px;
+}
+
+.footer-links{
+  display:flex;
+  flex-direction:column;
+  gap:6px;
+  opacity:0.8;
+}
+
+.footer-links p{
+  margin:0;
+  cursor:pointer;
+}
+
+.footer-social{
+  display:flex;
+  gap:15px;
+  font-size:18px;
+}
+
+.footer-bottom{
+  margin-top:30px;
+  border-top:1px solid rgba(255,255,255,0.1);
+  padding-top:15px;
+  font-size:13px;
+  opacity:0.6;
+}
+/* end footer css */

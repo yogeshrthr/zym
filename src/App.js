@@ -1,27 +1,32 @@
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 
-import Navbar from "./components/Navbar";
-import Footer from "./components/Footer";
+import LandingLayout from "./components/MainLayout";
+import DashboardLayout from "./components/DashboardLayout"; // ← this needs sidebar
 
+import Dashboard from "./pages/ClientDashboard";
 import Home from "./pages/Home";
 import Schedule from "./pages/Schedule";
 
 import "./styles/main.css";
+import "./styles/client.css";
 import 'bootstrap/dist/css/bootstrap.min.css';
-import 'bootstrap/dist/js/bootstrap.bundle.min.js'; // ADD THIS LINE
-import "./styles/main.css";
+import 'bootstrap/dist/js/bootstrap.bundle.min.js';
 
 function App() {
   return (
     <BrowserRouter>
-      <Navbar />
-
       <Routes>
-        <Route path="/" element={<Home />} />
-        <Route path="/schedule" element={<Schedule />} />
-      </Routes>
+        {/* Landing pages */}
+        <Route element={<LandingLayout />}>
+          <Route path="/" element={<Home />} />
+          <Route path="/schedule" element={<Schedule />} />
+        </Route>
 
-      <Footer />
+        {/* Dashboard pages — uses DashboardLayout */}
+        <Route element={<DashboardLayout />}>
+          <Route path="/dashboard" element={<Dashboard />} />
+        </Route>
+      </Routes>
     </BrowserRouter>
   );
 }
